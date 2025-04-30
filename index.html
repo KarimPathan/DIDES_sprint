@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>  
+  <title>Montage_ ONEWE</title>
+</head>
+<body>
+  <div class="song-title">
+  </div>
+  <button class="play-button">Start</button>
+  <audio class="song-korean" src="songs/KR_Montage.mp3"></audio>
+  <audio class="song-english" src="songs/EN_Montage.mp3"></audio>
+  
+  <div class="main-container">
+
+    <div class="title">Montage <br> ONEWE</div>
+    <div class="lyrics-container"></div>
+    <div class="language-switcher" style="display: none;">
+      <div class="language-option active" data-lang="korean">
+        <img src="img/kr2.svg"  alt="Korean" class="language-icon" />
+      </div>
+      <div class="language-option" data-lang="english">
+        <img src="img/en2.svg" alt="English" class="language-icon">
+      </div>
+    </div>
+  </div>
+  <div class="timer-display" style="position: fixed; bottom: 20px; right: 20px; color: white; z-index: 100;">
+    0:00
+  </div>
+</body>
+</html>
