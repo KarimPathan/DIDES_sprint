@@ -329,12 +329,46 @@ align-self: center;}
     left: 0%
 }
 
+@keyframes lyricFlickerKorean {
+    0%, 100% {
+      opacity: 1;
+      text-shadow: 0 0 5px currentColor;
+    }
+
+    12% {
+        opacity: 0.96;
+        text-shadow: 0 1px 3pxrgb(196, 124, 255);
+      }
+    25% {
+      opacity: 0.9;
+      text-shadow: 1px 0 3px rgb(196, 124, 255);
+    }
+    50% {
+      opacity: 0.9;
+      text-shadow: -1px 0 3pxrgb(196, 124, 255);
+
+      
+    }
+
+    62% {
+        opacity: 0.8;
+        text-shadow: 1px 0 3px rgb(196, 124, 255);
+      }
+    75% {
+      opacity: 0.88;
+      text-shadow: 0 1px 3px rgb(196, 124, 255);
+    }
+  }
+  
+  .lyric {
+    animation: lyricFlickerKorean 3s infinite ease-in-out;
+  }
 
 @media screen and (max-width: 932px) {
 
 
     .lyric {
-        color: rgb(159, 159, 255);
+        color: rgb(224, 224, 255);
         position: relative;
         font-family: Hangame;
         transition: opacity 0.5s ease-in-out;

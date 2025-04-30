@@ -285,7 +285,9 @@ function displayLyric(text, position, duration) {
   lyricElement.className = `lyric ${position} ${currentLanguage === 'english' ? 'english' : ''}`;
   lyricElement.textContent = text;
   lyricsContainer.appendChild(lyricElement);
-
+  
+  const randomTime = 5 + Math.random() * 5;
+  lyricElement.style.animationDuration = `${randomTime}s`;
   void lyricElement.offsetWidth;
   lyricElement.classList.add('show');
 
