@@ -92,8 +92,8 @@ const lyrics = {
     { text: "Even on this night, when I really miss you", start: 43, end: 53, position: 'en4' },
     { text: "it’s hard for me to go to sleep", start: 43, end: 53, position: 'en5' },
 
-    { text: "Even though it’s all a lie", start: 53, end: 57, position: 'en1' },
-    { text: "Please come closer to me", start: 53, end: 57, position: 'en5' },
+    { text: "Even though it’s all a lie,please come closer to me", start: 53, end: 57, position: 'en3' },
+    //{ text: "Please come closer to me", start: 53, end: 57, position: 'en5' },
 
 
     { text: "North, South, East, West", start: 58, end: 61, position: 'en2' },

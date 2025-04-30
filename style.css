@@ -258,14 +258,15 @@ hyphens: auto;
     grid-column: 1/2;
     justify-self: end;
     align-self: center;
-    top:20%;
-    left: 40%
+    top:10%;
+    left: 50%
 }
 
 .lyric.en2 {
     grid-column: 2/3;
     justify-self: end;
     align-self: center;
+    left: -30%;
 
 }
 
@@ -279,6 +280,7 @@ align-self: center;
     justify-self: start;
     align-self: center;
     top: -10%;
+    left: 20%;
 
 }
 
@@ -287,7 +289,7 @@ align-self: center;
     justify-self: end;
     align-self: center;
     top: 10%;
-    left: 30%;
+    left: 10%;
 
    
 }
