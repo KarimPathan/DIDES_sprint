@@ -470,7 +470,6 @@ align-self: center;}
 
       body {
         background: url(img/bg.png);   
-        transform: rotateX('90deg'); 
         mix-blend-mode: color-dodge;
         width: 100vw;
         height: 100vh;
