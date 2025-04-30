@@ -377,11 +377,11 @@ align-self: center;}
         transition: opacity 0.5s ease-in-out;
         writing-mode: vertical-rl;
         font-size: 3.7vh;
-        letter-spacing: -1px;
+        letter-spacing: 0px;
 
         opacity: 1;
     }
-    
+
     
     .lyric.english {
         color: rgb(255, 118, 129);
