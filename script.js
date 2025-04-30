@@ -38,7 +38,9 @@ const lyrics = {
     { text: "하나둘씩 세보아", start: 22, end: 32, position: 'kr2' },
     { text: "언제든 찾아올 수 있게", start: 22, end: 32, position: 'kr4'},
 
-    { text: "꿈과 현실 그사이 작은 경계선 즈음에", start: 33, end: 42, position: 'kr1' },
+    { text: "꿈과 현실 그사이 ", start: 33, end: 42, position: 'kr1' },
+    { text: "작은 경계선 즈음에", start: 33, end: 42, position: 'kr2' },
+
     { text: "작은 경계선 즈음에", start: 33, end: 42, position: 'kr4' },
     { text: "머물러 있어 주길 바라 나와 ", start: 33, end: 42, position: 'kr5' },,
 
@@ -73,6 +75,7 @@ const lyrics = {
 
 
   english: [
+
     { text: "Hoping you flow in my light sleep", start: 10, end: 13, position: 'en3' },
 
     { text: "The pieces of the broken scene", start: 22, end: 32, position: 'en1' },
@@ -155,11 +158,17 @@ playButton.addEventListener('click', () => {
   currentAudio.play().then(() => {
     startTimer();
 
+    // Hide play button and background after 1 second
     setTimeout(() => {
+      const playWrapper = document.querySelector('.play-button-wrapper');
+      if (playWrapper) {
+        playWrapper.classList.add('hidden');
+      }
+      
       startLyricsVisualizer();
       languageSwitcher.style.display = 'grid';
-      playButton.style.display = 'none';
-    }, 1000);
+    }, 1000); // Adjust this delay as needed
+    
   }).catch(error => {
     console.error("Playback failed:", error);
     alert("Audio playback failed. Please check console for details.");
@@ -255,7 +264,8 @@ function showCurrentLyrics() {
     if (!shouldKeep) {
       clearTimeout(timeoutIds[activeLyrics.indexOf(lyricEl)]);
       lyricEl.classList.remove('show');
-      setTimeout(() => lyricEl.remove(), 300);
+      /*setTimeout(() => lyricEl.remove(), 300);*/
+      lyricEl.remove()
       activeLyrics = activeLyrics.filter(l => l !== lyricEl);
     }
   });
@@ -294,7 +304,8 @@ function clearAllLyrics() {
 
   activeLyrics.forEach(lyric => {
     lyric.classList.remove('show');
-    setTimeout(() => lyric.remove(), 300);
+    /*setTimeout(() => lyric.remove(), 300);*/
+    lyric.remove()
   });
   activeLyrics = [];
 }
